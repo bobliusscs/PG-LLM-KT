@@ -45,6 +45,49 @@ Models are evaluated using standard metrics:
 - Precision and Recall
 - RMSE (Root Mean Square Error)
 
+## Instruction Data Format
+
+The `instruction_temp.py` script converts learning sequences into instruction-formatted data suitable for LLM training. Each data entry contains three fields:
+
+- **`system`**: System prompt describing the task objective and output constraints
+- **`instruction`**: The instruction containing the student's learning history and prediction target
+- **`output`**: Expected output (`right`/`wrong`)
+
+### Example 1: Standard Mode (without Graph Context)
+
+**System Prompt:**
+```
+This is a knowledge tracing task. You are given a student's learning history consisting of question IDs, concept IDs, and correctness outcomes. Use temporal progression, mastery transitions, performance trends to infer whether the student will answer the next question correctly. Answer only 'right' or 'wrong'.
+```
+
+**Instruction:**
+```
+Student History: The student with ID=42 answered in order: t = 1: q = 12243, c = {19}, right; t = 2: q = 12267, c = {19}, wrong
+Prediction Target: Predict whether the student will answer correctly at t = 3: q = 12290, c = {27}.
+
+Prediction:
+```
+
+**Output:** `right`
+
+### Example 2: Standard Mode + Graph Context
+
+**System Prompt:**
+```
+This is a knowledge tracing task. You are given a student's learning history consisting of question IDs, concept IDs, and correctness outcomes. Use temporal progression, mastery transitions, performance trends and graph context to infer whether the student will answer the next question correctly. Answer only 'right' or 'wrong'.
+```
+
+**Instruction:**
+```
+Student History: The student with ID=42 answered in order: t = 1: q = 12243, c = {19}, right; t = 2: q = 12267, c = {19}, wrong
+Prediction Target: Predict whether the student will answer correctly at t = 3: q = 12290, c = {27}.
+Graph Context: The prerequisite knowledge points for the target concepts are {15,22}.
+
+Prediction:
+```
+
+**Output:** `right`
+
 ## Repository Status
 
 **Important Note**: The complete source code for this project will be made publicly available upon acceptance of the associated research paper. This repository currently contains documentation and structural information for the project.
