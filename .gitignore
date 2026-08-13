@@ -1,4 +1,17 @@
 
 __pycache__/
 *.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+data/processed/
+data/splits/
+data/instructions/
+data/knowledge_graph/
+models/
+outputs/
+wandb/
 

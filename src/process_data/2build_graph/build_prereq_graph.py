@@ -51,8 +51,8 @@ class Config:
     
     # 基础路径
     WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-    PROCESSED_DIR = os.path.join(WORKSPACE_ROOT, "dataSet", "processed")
-    KNOWLEDGE_GRAPH_DIR = os.path.join(WORKSPACE_ROOT, "dataSet", "knowledge_graph")
+    PROCESSED_DIR = os.path.join(WORKSPACE_ROOT, "data", "processed")
+    KNOWLEDGE_GRAPH_DIR = os.path.join(WORKSPACE_ROOT, "data", "knowledge_graph")
     
     # 动态设置的路径（由set_dataset方法设置）
     DATA_DIR: str = ""

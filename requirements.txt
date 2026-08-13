@@ -1,0 +1,2 @@
+# Data preparation and prerequisite-graph construction
+pandas>=2.0,<3

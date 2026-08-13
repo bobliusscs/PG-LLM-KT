@@ -624,10 +624,7 @@ def main():
     # 正确设置input_root和output_root路径
     input_root = workspace_root / args.input_root
     # 如果启用了图上下文，输出到 data_text_graph 目录
-    if args.use_graph_context:
-        output_root = workspace_root / args.output_root.replace('data_text', 'data_text_graph')
-    else:
-        output_root = workspace_root / args.output_root
+    output_root = workspace_root / args.output_root
     
     print(f"输入根目录: {input_root}")
     print(f"输出根目录: {output_root}")
