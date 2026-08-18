@@ -131,13 +131,13 @@ The small test suite validates preprocessing and deterministic learner-level spl
 
 ## Experimental reproducibility
 
-To ensure transparency regarding result variability, all main experimental results are averaged over three independent runs with different random splits. The reported tables present mean values for clarity. The complete experimental logs, including standard deviations and confidence intervals, are shown below:
+To ensure transparency regarding result variability, all main experimental results are averaged over three independent runs. The reported tables present (mean ± std) values for clarity:
 
-*Figure 1: Main comparison results (mean ± std)*
+*Figure 1: Main comparison results*
 
 ![Main comparison results](img/img1.png)
 
-*Figure 2: Cross-dataset results (mean ± std)*
+*Figure 2: Cross-dataset results*
 
 ![Cross-dataset results](img/img2.png)
 
