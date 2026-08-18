@@ -133,11 +133,14 @@ The small test suite validates preprocessing and deterministic learner-level spl
 
 To ensure transparency regarding result variability, all main experimental results are averaged over three independent runs with different random splits. The reported tables present mean values for clarity. The complete experimental logs, including standard deviations and confidence intervals, are shown below:
 
-![Main comparison results](img/img1.png)
 *Figure 1: Main comparison results (mean ± std)*
 
-![Cross-dataset results](img/img2.png)
+![Main comparison results](img/img1.png)
+
 *Figure 2: Cross-dataset results (mean ± std)*
+
+![Cross-dataset results](img/img2.png)
+
 
 The observed standard deviations are generally small, confirming the stability of our method across random splits.
 
