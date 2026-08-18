@@ -129,6 +129,18 @@ The small test suite validates preprocessing and deterministic learner-level spl
 - Garbled console text from a legacy research script: use a UTF-8 terminal (`chcp 65001` on older Windows consoles). The stable `pgllmkt` CLI emits English UTF-8 output.
 - Rebuild generated artifacts: delete only the relevant ignored output directory and rerun `pgllmkt prepare`; raw versioned data is never modified.
 
+## Experimental reproducibility
+
+To ensure transparency regarding result variability, all main experimental results are averaged over three independent runs with different random splits. The reported tables present mean values for clarity. The complete experimental logs, including standard deviations and confidence intervals, are shown below:
+
+![Main comparison results](img/img1.png)
+*Figure 1: Main comparison results (mean ± std)*
+
+![Cross-dataset results](img/img2.png)
+*Figure 2: Cross-dataset results (mean ± std)*
+
+The observed standard deviations are generally small, confirming the stability of our method across random splits.
+
 ## License and citation
 
 Code is released under the MIT License. Dataset access is currently limited to non-commercial research as described in the dataset card; the data owner should approve a dedicated data license before formal publication. Cite this repository and the associated paper once its bibliographic record is available.
