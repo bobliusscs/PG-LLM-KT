@@ -137,7 +137,7 @@ The main experimental results are averaged over three independent runs. The repo
 
 ![Main comparison results](img/img1.png)
 
-*Figure 2: Cross-dataset results*
+*Figure 2: Cross-dataset results of PG-LLM-KT*
 
 ![Cross-dataset results](img/img2.png)
 
