@@ -142,8 +142,6 @@ To ensure transparency regarding result variability, all main experimental resul
 ![Cross-dataset results](img/img2.png)
 
 
-The observed standard deviations are generally small, confirming the stability of our method across random splits.
-
 ## License and citation
 
 Code is released under the MIT License. Dataset access is currently limited to non-commercial research as described in the dataset card; the data owner should approve a dedicated data license before formal publication. Cite this repository and the associated paper once its bibliographic record is available.
